@@ -15,10 +15,12 @@ for (let i = 1; i <= count; i++) {
   }
 }
 
-let result = ""
+let result = rows.join("\n");
 
-for (const row of rows) {
-  result = result + row + "\n";
-}
-
+// Show in console (debug)
 console.log(result);
+
+// Show on page
+const pre = document.createElement("pre");
+pre.textContent = result;
+document.body.appendChild(pre);
